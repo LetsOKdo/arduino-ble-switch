@@ -12,17 +12,36 @@ Set the UUID of the peripheral service to be scanned for:
 const char* UUID = "FD6F"; // Exposure service
 ```
 
-Set minimum RSSI value in dB to adhjust a suitable range for the switch:
+Set minimum RSSI value to adjust a suitable range for the switch:
 
 ```
 const int MIN_RSSI = -85;
+````
+
+Set timeout for discovery callback in ms
+
+```
+const int TIMEOUT = 1000;
 ```
 
-Set the number of bounces and timeout values to adjust sensitivity:
+## ArduinoBLESwitchMode
+
+This version uses a mode calculation to debounce signal strength.
+
+Set the RSSI_COUNT to control switching sensitivity:
+
+```
+const int RSSI_COUNT = 4;
+```
+
+## ArduinoBLESwitch
+This version uses number of bounces to debounce signal strength. 
+
+Set the NUMBER_OF_BOUNCES value to adjust sensitivity:
 
 ```
 const int NUMBER_OF_BOUNCES = 3;
-const int TIMEOUT = 1000; // Timeout in ms
+
 ``` 
 
   
